@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BDG Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f1a;
+    color: white;
+}
+
+header {
+    background: #1a1a2e;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: #1f1f2f;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #00c853;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00a844;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+🛒 BDG SHOP
+</header>
+
+<div class="container">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+        <h3>Product 1</h3>
+        <p>Cool digital item</p>
+
+        <select id="p1pay">
+            <option>PayPal</option>
+            <option>Cash App</option>
+            <option>Crypto</option>
+            <option>Gift Card</option>
+        </select>
+
+        <button onclick="order('Product 1', 'p1pay')">
+            Open Ticket
+        </button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+        <h3>Product 2</h3>
+        <p>Another cool item</p>
+
+        <select id="p2pay">
+            <option>PayPal</option>
+            <option>Cash App</option>
+            <option>Crypto</option>
+            <option>Gift Card</option>
+        </select>
+
+        <button onclick="order('Product 2', 'p2pay')">
+            Open Ticket
+        </button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+        <h3>Product 3</h3>
+        <p>Best seller item</p>
+
+        <select id="p3pay">
+            <option>PayPal</option>
+            <option>Cash App</option>
+            <option>Crypto</option>
+            <option>Gift Card</option>
+        </select>
+
+        <button onclick="order('Product 3', 'p3pay')">
+            Open Ticket
+        </button>
+    </div>
+
+</div>
+
+<footer>
+Made for BDG Shop Bot
+</footer>
+
+<script>
+function order(product, payId) {
+    const payment = document.getElementById(payId).value;
+
+    alert(
+        "Order Created!\n\n" +
+        "Product: " + product + "\n" +
+        "Payment: " + payment + "\n\n" +
+        "Now go to Discord to complete your ticket."
+    );
+
+    window.open("https://discord.gg/Dksh2ngaAA", "_blank");
+}
+</script>
+
+</body>
+</html>
